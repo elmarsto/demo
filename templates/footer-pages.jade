@@ -1,0 +1,12 @@
+
+h3 Pages
+div.column-group
+ul.all-90
+  each location in locals.sitemap
+    li
+      a(href=location.href)= location.menu.name
+ul.all-10
+  each location in locals.extmap
+    li.button
+      a(href=location.href)
+        i.fa(class=location.menu.icon)

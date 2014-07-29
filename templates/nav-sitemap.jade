@@ -1,0 +1,8 @@
+
+each location in locals.sitemap
+  li(class=location.menu.class)
+    if (location.menu.icon)
+      a(href=location.href)
+        i.fa(class=location.menu.icon)
+    else
+      a(href=location.href)= location.menu.name

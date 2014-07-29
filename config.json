@@ -1,6 +1,19 @@
 {
   "output": "build/demo/",
   "locals": {
+    "tweets": [ { 
+       "name": "Company",
+       "at": "@Company,",
+       "content": "Lorem Ipsum dolor...",
+       "date": "20 Dec"
+      },{ 
+       "name": "Company",
+       "at": "@Company,",
+       "content": "http://somelink.com/",
+       "date": "20 Dec"
+      }
+    ],
+    "copyright": "2001-2013",
     "path": {
       "css" : "style",
       "js"  : "logic",
@@ -23,7 +36,7 @@
     "ownurl":   "https://demo.undoware.ca",
     "owner":    "Liz Mars",
     "ownemail":    "Liz Mars <liz@undoware.ca>",
-    "name":     "Demo",
+    "name":     "Company Name",
     "description": "demo",
     "language": { "code": "en-CA", "name": "English" },
     "sitemap": [
@@ -67,25 +80,37 @@
         "href": "/search.html",
         "menu": {
           "name" : "Search",
-          "class": "menuitem icon search fa-search"
+          "class": "menuitem icon search",
+          "icon": "fa-search"
         }
       },{
         "href": "/contact.html",
         "menu": {
           "name" : "Contact",
-          "class": "menuitem icon contact fa-comment-o"
+          "class": "menuitem icon contact",
+          "icon": "fa-comment-o"
         }
-      },{
+      }],
+      "extmap": [ {
         "href": "/redirect/facebook",
         "menu": {
           "name" : "Facebook",
-          "class": "menuitem icon facebook fa-facebook"
+          "class": "menuitem icon facebook",
+          "icon": "fa-facebook"
         }
       },{
         "href": "/redirect/twitter",
         "menu": {
           "name" : "Twitter",
-          "class": "menuitem icon twitter fa-twitter"
+          "class": "menuitem icon twitter",
+          "icon": "fa-twitter"
+        }
+      },{
+        "href": "/redirect/youtube",
+        "menu": {
+          "name" : "YouTube",
+          "class": "menuitem icon youtube",
+          "icon": "fa-youtube"
         }
       }
     ],
@@ -94,10 +119,9 @@
         "config": {
           "paths"  : { "ng":        "https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min",
                        "ng-touch":  "https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular-touch",
-                       "site":  "/logic/site",
-                       "logo":  "/logic/logo"
+                       "site":  "/logic/site"
           },
-          "deps"   : [ "ng", "site", "logo"  ]
+          "deps"   : [ "ng", "site"  ]
         }
     },
     "scale": {

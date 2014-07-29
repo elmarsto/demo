@@ -10,12 +10,12 @@ html(lang=locals.language.code,itemscope,itemtype="http://schema.org/Article")
     title
       - var t = (page) ? page.title + ' - ' + locals.name : locals.name;
       | !{t}
-  - var bodyClass = (page && 'class' in page.metadata) ? page.metadata.class : 'body';
-  body.ink-grid#body(class=bodyClass ng-controller="Site")
-    div#page
-      header.area.header(role='heading')
+  body.ink-grid#body(ng-controller="Site")
+    block page
+      header.main.column-group(role='heading')
         block header
-      main.area.main(role='main')
+      main.column-group(role='main')
         block content
-      footer.area.footer(role='complementary')
+      footer.main.column-group(role='complementary')
         block footer
+

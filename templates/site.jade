@@ -3,12 +3,25 @@
 
 block append header
   include ie.html
-  nav
+  nav.all-100
     ul
       li.logo
-      each location in locals.sitemap
-        li(class=location.menu.class)
-          a(href=location.href)= location.menu.name
+        a(href='/')
+          img(src='raster/logo.png',alt='Company Name')
+      include nav-sitemap
+      include nav-extmap
+  img.all-100(src='/raster/dummy.png',alt='spinner')
+
+block append footer
+  div.all-33
+    include footer-pages
+  div.all-33
+    include footer-twitter
+  div.all-33
+    include footer-newsletter
+
+block append page
+  include copyright
 
 extends stock
 

@@ -1,0 +1,11 @@
+h3 Twitter
+
+each tweet in locals.tweets
+  div.column-group
+    div.all-90
+      h5
+        strong !{tweet.name}
+        | &nbsp; !{tweet.at}
+      p= tweet.content
+    div.all-10
+      h6=tweet.date
