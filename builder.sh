@@ -21,15 +21,21 @@ set -o nounset                              # Treat unset variables as an error
 
 
 us=`pwd`
-ink=$us/stack/Ink/
 
+node -v || echo "Need node installed. Consider https://github.com/creationix/nvm" 
 
-cd $ink
-make
-cd -
-us=`pwd`
-b=$us/build/$document
-pushd $us
-git commit -am 'autocommit'
-wintersmith build
+echo "##### Installing Wintersmith...."
+
+npm install -g wintersmith
+
+echo "##### Installing Coffeescript..."
+npm install -g coffee-script
+npm update
+
+echo "##### Patching weird bug in wintersmith-stylus...."
+pushd $us/node_modules/wintersmith-stylus
+coffee -c plugin.coffee 
+popd 
+
+echo "##### Starting wintersmith built-in webserver..."
 wintersmith preview

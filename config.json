@@ -22,28 +22,70 @@
     "base":     "https://demo.undoware.ca",
     "ownurl":   "https://demo.undoware.ca",
     "owner":    "Liz Mars",
-    "ownemail":    "liz@undoware.ca (Liz Mars)",
+    "ownemail":    "Liz Mars <liz@undoware.ca>",
     "name":     "Demo",
     "description": "demo",
     "language": { "code": "en-CA", "name": "English" },
     "sitemap": [
       {
-        "href": "/who/",
+        "href": "/products.html",
         "menu": {
-          "name" : "Who",
-          "class": "who"
+          "name" : "Products",
+          "class": "menuitem-products"
         }
       },{
-        "href": "/what/",
+        "href": "/news.html",
         "menu": {
-          "name" : "What",
-          "class": "what"
+          "name" : "News",
+          "class": "menuitem-news"
         }
       },{
-        "href": "/when/",
+        "href": "/community.html",
         "menu": {
-          "name" : "When",
-          "class": "when"
+          "name" : "Community",
+          "class": "menuitem-community"
+        }
+      },{
+        "href": "/services.html",
+        "menu": {
+          "name" : "Services",
+          "class": "menuitem-services"
+        }
+      },{
+        "href": "/partners.html",
+        "menu": {
+          "name" : "Partners",
+          "class": "menuitem-partners"
+        }
+      },{
+        "href": "/download.html",
+        "menu": {
+          "name" : "Download",
+          "class": "menuitem-download"
+        }
+      },{
+        "href": "/search.html",
+        "menu": {
+          "name" : "Search",
+          "class": "menuitem-search"
+        }
+      },{
+        "href": "/contact.html",
+        "menu": {
+          "name" : "Contact",
+          "class": "menuitem-contact"
+        }
+      },{
+        "href": "/redirect/facebook",
+        "menu": {
+          "name" : "facebook",
+          "class": "menuitem-facebook"
+        }
+      },{
+        "href": "/redirect/twitter",
+        "menu": {
+          "name" : "twitter",
+          "class": "menuitem-twitter"
         }
       }
     ],
@@ -52,8 +94,8 @@
         "config": {
           "paths"  : { "ng":        "https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min",
                        "ng-touch":  "https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular-touch",
-                       "site":  "https://undoware-cdn.appspot.com/logic/site",
-                       "logo":  "https://undoware-cdn.appspot.com/logic/logo"
+                       "site":  "/logic/site",
+                       "logo":  "/logic/logo"
           },
           "deps"   : [ "ng", "site", "logo"  ]
         }
