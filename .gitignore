@@ -1,0 +1,10 @@
+/stack/
+/build/
+.*.swp
+.*.swo
+*~
+*.bak
+*.orig
+*.diff
+/credentials/
+/node_modules/

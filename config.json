@@ -1,0 +1,84 @@
+{
+  "output": "build/demo/",
+  "locals": {
+    "path": {
+      "css" : "style",
+      "js"  : "logic",
+      "png" : "raster",
+      "jpg" : "raster",
+      "svg" : "vector",
+      "pdf" : "vector",
+      "woff": "font",
+      "eot" : "font",
+      "ttf" : "font",
+      "mp3" : "encoded",
+      "mp4" : "encoded",
+      "ogg" : "encoded",
+      "mov" : "encoded",
+      "mkv" : "encoded",
+      "avi" : "encoded",
+      "flac" : "encoded"
+    },
+    "base":     "https://demo.undoware.ca",
+    "ownurl":   "https://demo.undoware.ca",
+    "owner":    "Liz Mars",
+    "ownemail":    "liz@undoware.ca (Liz Mars)",
+    "name":     "Demo",
+    "description": "demo",
+    "language": { "code": "en-CA", "name": "English" },
+    "sitemap": [
+      {
+        "href": "/who/",
+        "menu": {
+          "name" : "Who",
+          "class": "who"
+        }
+      },{
+        "href": "/what/",
+        "menu": {
+          "name" : "What",
+          "class": "what"
+        }
+      },{
+        "href": "/when/",
+        "menu": {
+          "name" : "When",
+          "class": "when"
+        }
+      }
+    ],
+    "loader": {
+        "src":  "https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.8/require.min",
+        "config": {
+          "paths"  : { "ng":        "https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min",
+                       "ng-touch":  "https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular-touch",
+                       "site":  "https://undoware-cdn.appspot.com/logic/site",
+          },
+          "deps"   : [ "ng", "site"  ]
+        }
+    },
+    "scale": {
+      "initial":  "0.7",
+      "max":      "0.8",
+      "user":     "1"
+    }
+  },
+  "plugins": [
+      "wintersmith-ls",
+      "wintersmith-stylus"
+  ],
+  "require": {
+    "moment": "moment",
+    "cheerio": "cheerio",
+    "_": "underscore",
+    "typogr": "typogr",
+    "markdown": "markdown"
+  },
+  "jade": {
+    "pretty": true
+  },
+  "markdown": {
+    "smartLists": true,
+    "smartypants": true
+  }
+}
