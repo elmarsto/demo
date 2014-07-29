@@ -17,14 +17,8 @@ block meta
   meta(name="language",content="English")
   meta(name="dc.language",content="en-CA")
   meta(name="robots",content="all")
-  meta(name="reply-to",content="liz@undoware.ca")
   meta(property="og:type",content="blog")
-  meta(name="dc.keywords",content="Human Rights, UX, Technology, Politics")
-  meta(name="dc.subject",content="Technology Ethics")
   meta(property="og:site_name",content=locals.name)
-  meta(name="twitter:domain",content="undoware.ca")
-  meta(name="twitter:site",content="@Undoware")
-  meta(name="twitter:creator",content="@Undoware")
   meta(name="copyright",content=locals.name)
   meta(property="og:title",content=locals.name)
   meta(name="name",content=locals.name)
@@ -53,12 +47,6 @@ block meta
 
   //# /* Put a desc of this page everywhere it needs to be */
   - var d = locals.description /* default */
-  if (page && 'status' in page.metadata)
-    - d = page.metadata.status /* if there's a social media status, use it in preference to site description */
-  if (page && 'excerpt' in page.metadata)
-    - d = page.metadata.excerpt /* if there's an excerpt, definitely use that */
-  if (page && 'blurb' in page.metadata)
-    - d = page.metadata.blurb /* I used to call excepts blurbs*/
   meta(property="og:description",content=d)
   meta(name="twitter:description",content=d)
   meta(name="description",content=d)
