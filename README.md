@@ -1,12 +1,5 @@
 DEMO
 -----
-This is a demo, nothing to see here. 
 
-You will need node.js to compile.
-
-Install node.js and then in the root of this project './builder.sh'
-
-You may have trouble compiling; there is a bug upstream in wintersmith-stylus recently introduced.
-
-If you see errors about not being able to find 'plugin', just cd node_modules/wintersmith-stylus && coffee -c plugin.coffee
+To run this project, simply './main.sh'. You will need Node installed. Consider http://github.com/creationix/nvm if you haven't already.
 

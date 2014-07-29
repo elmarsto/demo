@@ -1,270 +1,40 @@
 /* MIT License, (c) 2013 Elizabeth Marston */
 
 
-.area
-  margin 30px
-  a
-
-  &.header
-    overflow: hidden
-    local-headline-font()
-    font-size: 16pt;
-    margin: 0;
-    width: 100%
-    em  { margin: 0; display: block; font-size: 12pt; padding: 0; }
-    h1, h2, h3, h4, h5
-      local-headline-font()
-      font-weight: bold;
-      color: inherit
-      padding: 0;
-      margin: 0;
-      display: inline-block;
-      text-align: left
-    h1  { font-size:21pt; text-transform: uppercase}
-    h2  { font-size:16pt; }
-    h3  { font-size:14pt; }
-    h4  { font-size:12pt; }
-    h5  { font-size:10pt; }
-    h5  { font-size:9pt; }
-    .logo
-    .slogan
-      display: block
-      background-size: 48px auto
-      background-repeat: no-repeat
-      background-position: 64px 0px
-      font-weight: bold
-      a
-        &:hover
-        &:active
-          color: local-highlight-color
-
-    .logo
-      letter-spacing: 0.1em
-      margin-top: 8px
-      h1
-        a
-          color: local-action-color
-    .slogan
-      width: 100%
-      font-size: 8pt
-      a
-        color: #A0A0A0
-    nav
-      a
-        font-weight: bold
-      a
-        color: local-action-color
-        &:link
-        &:visited
-          color: local-action-color
-          text-shadow: none
-        &:hover
-        &:active
-        &:focus
-          text-shadow: 0px 0px 3px black
-          color: local-highlight-color
-
-      text-align: right
-      font-size: 12pt
-      text-indent: 0;
-      li
-        padding: 1em;
-        display: inline-block
-        &.nav-selected
-          font-weight: 700;
-          li
-            font-weight: 500;
-  &.main
-    min-height: 512px;
-    min-width: 800px;
-    width: 100%
-    background-color: transparent
-    local-font()
-    margin: 2em 0 0 0;
-    line-height: 1.4em
-    word-wrap break-word
-    padding-left: 4em;
-    a
-      color: local-accent-color
-      &:hover
-      &:active
-      &:focus
-        text-decoration: none;
-        text-shadow 0px 0px 4px local-highlight-color
-    p a:after, li a:after
-      color: local-action-color
-      content: '*'
-    article footer
-      color local-action-color !important
-      text-align right
-    ul
-      li
-        margin-bottom: 0.7em
-      padding-left: 1em
-      list-style: none
-      li:before
-        content: ''
-        padding-right: 0.2em
-    h1, h2, h3, h4
-      local-headline-font()
-      color:local-accent-color;
-      text-align: left
-      a
-        color: local-accent-color
-        &:hover
-        &:active
-        &:focus
-          local-highlight-color
-    h1 { font-size: 21pt; color:local-accent-color; }
-    h2 { font-size: 18pt; font-weight: 300 !important; margin: 1em auto; }
-    h3 { font-size: 14pt; margin: 0.5em auto; }
-    h4 { font-size: 11pt; margin: 0.5em auto; color: #A0A0A0}
-    h5 { font-size: 14pt; font-weight: 300; margin: 1em auto; }
-    h6 { font-size: 14pt; font-weight: 300; margin: 1em auto; }
-    p
-      font-size: 16pt;
-      text-indent: 0.5em;
-      padding: 5px 10px 0 0 ;
-      margin: 0.5em;
-      text-align: justify;
-    article.story
-      max-width: 800px
-      min-width: 450px
-    article.story
-    article.article
-      text-align: justify
-      & > section p:first-child
-        text-indent: 0;
-        &:first-letter
-          local-headline-font()
-          font-size: 3em
-          float:left
-          display:block
-          margin  -0.4em 0 0 0 
-          padding: 0 0.1em 0 0
-          color: local-action-color;
-          text-transform: uppercase;
-          margin:11px 0 -5px 0; 
-          padding:0 .1em 0 0; 
-          height:.7em; 
-          line-height:.85em; 
-          float:left; 
-    archive-entry
-      margin-left: 2em
-      line-height: 0.9em
-    section.archive
-      min-width: 800px
-      & li:before
-        content: '' !important
-    section.content
-      background-image: url(https://undoware-cdn.appspot.com/vector/logo-translucent.svg)
-      background-position: bottom right
-      background-size: 1em 1em
-      background-repeat: no-repeat
-      margin-bottom: 3em
-    menu.nav
-      text-align center
-      font-size: 10pt
-
-    figure
-      display: block
-      max-width: 728px
-      min-width: 128px
-      margin: 0 auto
-      img
-        display: block
-        width: 100%
-    figcaption
-      display: block
-      width: 100%
-      text-align: right
-      font-size: 0.5em
-
-  &.footer
-    font-size: 8pt;
-    h1 { font-size: 14pt; }
-    h2 { font-size: 12pt; }
-    h3 { font-size: 10pt; }
-    h4 { font-size: 8pt;  }
-    h5 { font-size: 7pt;  }
-    h6 { font-size: 6pt;  }
-    width 100%
-    padding 0
-    margin 0
-    clear both
-
 
 body
-  background-color local-background-color
-  background-image  url(https://undoware-cdn.appspot.com/raster/bubble-chamber.jpg)
-  background-attachment fixed
-  background-repeat repeat
-  background-size 100%
-  &.portfolio
-    background-image  url(https://undoware-cdn.appspot.com/raster/shattered.png)
-    background-attachment fixed
-    background-repeat repeat
-  &.who
-    background-image  url(https://undoware-cdn.appspot.com/raster/me.jpg)
-    background-size contain
-    background-repeat no-repeat
-    background-position right bottom
-    background-attachment fixed
-  &.when
-    background-image  url(https://undoware-cdn.appspot.com/raster/berlin.jpg)
-    background-size cover
-    background-repeat repeat-y
-    background-attachment fixed
-  &.resume
-    background-color #000
-    background-image  url(https://undoware-cdn.appspot.com/raster/zwartevilt.png)
-    background-repeat repeat
-    header.area.header
-      display: none !important
-      
-
-
-.logo-block
-  display:flex
-  flex-direction: row
-  flex-wrap: no-wrap
-  justify-content: flex-start
-  align-items: flex-start
-  .chop
-    width: 3em
-    flex: none
-    padding: 0
-    margin: 0 
-    img
-      vertical-align: bottom 
-  .logotype
-    width: 10em
-    justify-content: flex-start
-    align-items: flex-start
-    flex-direction: column
-    display: flex
-    flex: none
-   
-
-.page-title
-  margin-top: 1em !important
-  color: #FFFFFF !important
-  text-shadow: none !important
- 
-menu.nav
-  margin-bottom: 64px
-  color: local-action-color
+  background-color local-gutter-color
+  local-font()
+  h1, h2, h3, h4
+    local-headline-font()
+nav
+  box-shadow 2px 2px 2px #101010
+  background-color local-highlight-color
+  color white
   a
-    color: inherit
+    color: white
+    &:hover
+    &:active
+    &:focus
+      text-decoration: underline
+  li
+    padding: 1em;
+    display: inline-block
+    &.nav-selected
+      text-decoration: underline;
 
 
-.area.footer
-  min-height: 4em
+
+main
+  background-color local-background-color
+  box-shadow 2px 2px 2px #101010
+
+footer.main
+  background-color local-accent-color
+  color white
 
 ::-moz-selection
 ::selection
   color: local-action-color
   background-color: local-background-color
 
-.bevel
-  border-radius local-corner-radius

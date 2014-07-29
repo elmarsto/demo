@@ -1,21 +1,4 @@
-/*
- * main.styl -> main.css via github://learnboost/stylus (node_modules/stylus/bin/stylus)
- * reset.styl adapted from html5doctor.com Reset Stylesheet v1.6.1 http://richclarkdesign.com
- * TODO: make all these .styl files a lot more organized and simple. Cruft buildup!
- * TODO: make this all less !important
- */
-
-/* CSS Reset */
-@import(reset)
-
-/* Load colour choices */
-@import(local)
-
-/* Load standard CSS, wrapped in a screen media query */
-@import(screen)
-
-/* Load media query for narrow displays (mobile) */
-@import(mobile)
-
-/* Load print stylesheet  */
-@import(print)
+@import 'reset' 
+@import 'local'
+@import 'screen'
+@import 'mobile'

@@ -3,21 +3,12 @@
 
 block append header
   include ie.html
-  div.column-group
-    div.logo-block.push-left.large-25.small-25
-      div.chop
-        a(href='/')
-          img(src=svg('logo'),alt="logo")
-      div.logotype
-        h1
-          span.logo#logo locals.title
-    nav
-      ul
-        each location in locals.sitemap
-          li
-            a(href=location.href)= location.menu.name
+  nav
+    ul
+      li.logo
+      each location in locals.sitemap
+        li(class=location.menu.class)
+          a(href=location.href)= location.menu.name
 
 extends stock
-
-
 

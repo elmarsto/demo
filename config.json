@@ -37,55 +37,55 @@
         "href": "/news.html",
         "menu": {
           "name" : "News",
-          "class": "menuitem-news"
+          "class": "menuitem news"
         }
       },{
         "href": "/community.html",
         "menu": {
           "name" : "Community",
-          "class": "menuitem-community"
+          "class": "menuitem community"
         }
       },{
         "href": "/services.html",
         "menu": {
           "name" : "Services",
-          "class": "menuitem-services"
+          "class": "menuitem services"
         }
       },{
         "href": "/partners.html",
         "menu": {
           "name" : "Partners",
-          "class": "menuitem-partners"
+          "class": "menuitem partners"
         }
       },{
         "href": "/download.html",
         "menu": {
           "name" : "Download",
-          "class": "menuitem-download"
+          "class": "menuitem download"
         }
       },{
         "href": "/search.html",
         "menu": {
           "name" : "Search",
-          "class": "menuitem-search"
+          "class": "menuitem icon search fa-search"
         }
       },{
         "href": "/contact.html",
         "menu": {
           "name" : "Contact",
-          "class": "menuitem-contact"
+          "class": "menuitem icon contact fa-comment-o"
         }
       },{
         "href": "/redirect/facebook",
         "menu": {
-          "name" : "facebook",
-          "class": "menuitem-facebook"
+          "name" : "Facebook",
+          "class": "menuitem icon facebook fa-facebook"
         }
       },{
         "href": "/redirect/twitter",
         "menu": {
-          "name" : "twitter",
-          "class": "menuitem-twitter"
+          "name" : "Twitter",
+          "class": "menuitem icon twitter fa-twitter"
         }
       }
     ],
