@@ -1,0 +1,16 @@
+// icon.jade
+
+include util
+
+- var p = png('icon');
+- var s = svg('icon');
+link(rel="icon",            href=s)
+link(rel="favicon",         href=p )
+link(rel="image_src",       href=s)
+link(rel="apple-touch-icon",href=s)
+each i in [ 57, 72, 114 ]
+  - var p = png('icon-' + i);
+  - var s = svg('icon');
+  - var sz_str  =  i + 'x' + i;
+  link(rel="shortcut icon"   ,type="image/png",sizes=sz_str, href=p)
+  link(rel="apple-touch-icon",type="image/png",sizes=sz_str, href=p)

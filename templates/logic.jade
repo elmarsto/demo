@@ -1,0 +1,17 @@
+// logic.jade
+
+include util
+
+// global vars: ugly, yet effective
+- var conf = JSON.stringify(locals.loader.config)
+| <script>
+|   require          = !{conf};
+|   require.baseUrl  = "/!{locals.path['js']}";
+|   require.callback = function(ng) {
+|     angular.bootstrap(document.getElementById('body'), ['site']);
+|   };
+| </script>
++requirejs
+
+
+

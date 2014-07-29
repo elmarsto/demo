@@ -1,0 +1,74 @@
+// meta.jade. TODO FIXME this is trending spaghettiwards. Break up into interests based on source of pain, e.g. opengraph, google plus, hcard, etc.
+include util
+
+block meta
+  meta(charset='utf-8')
+  meta(name="twitter:card",content="summary")
+  meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+  meta(name='MobileOptimized',content='320')
+  meta(name='HandheldFriendly',content='True')
+  meta(http-equiv="Content-Type", content="text/html; charset=utf-8")
+  meta(name="apple-mobile-web-app-capable",content="yes")
+  meta(name="apple-mobile-web-app-status-bar-style",content="black")
+  meta(name="viewport",content=viewport(locals.scale))
+  meta(name="web_author",content=locals.owner)
+  meta(name="language",content=locals.language.name)
+  meta(name="dc.language",content=locals.language.code)
+  meta(name="language",content="English")
+  meta(name="dc.language",content="en-CA")
+  meta(name="robots",content="all")
+  meta(name="reply-to",content="liz@undoware.ca")
+  meta(property="og:type",content="blog")
+  meta(name="dc.keywords",content="Human Rights, UX, Technology, Politics")
+  meta(name="dc.subject",content="Technology Ethics")
+  meta(property="og:site_name",content=locals.name)
+  meta(name="twitter:domain",content="undoware.ca")
+  meta(name="twitter:site",content="@Undoware")
+  meta(name="twitter:creator",content="@Undoware")
+  meta(name="copyright",content=locals.name)
+  meta(property="og:title",content=locals.name)
+  meta(name="name",content=locals.name)
+  //# /* Generate permalink URL for this page.  */
+  -var u
+  -if (page && 'url' in page)
+    -u = locals.base + page.url
+  -else
+    -u = locals.base
+  meta(property="og:url",content=u)
+  meta(name="twitter:url",content=u)
+  meta(name="dc.source",content=u)
+
+
+  //# /* Generate the social media image for this page. If one isn't found, use a default. */
+  -var i
+  -if (page && 'thumbnail' in page.metadata)
+    -i = page.metadata.thumbnail
+  -else
+    -i = cdn('/raster/icon-256.png')
+
+  meta(property="og:image",content=i)
+  meta(name="twitter:image:src",content=i)
+  meta(itemprop="image",content=i)
+
+
+  //# /* Put a desc of this page everywhere it needs to be */
+  - var d = locals.description /* default */
+  if (page && 'status' in page.metadata)
+    - d = page.metadata.status /* if there's a social media status, use it in preference to site description */
+  if (page && 'excerpt' in page.metadata)
+    - d = page.metadata.excerpt /* if there's an excerpt, definitely use that */
+  if (page && 'blurb' in page.metadata)
+    - d = page.metadata.blurb /* I used to call excepts blurbs*/
+  meta(property="og:description",content=d)
+  meta(name="twitter:description",content=d)
+  meta(name="description",content=d)
+  meta(itemprop="description",content=d)
+
+
+  - var n = locals.name /*default*/ 
+  if (page)
+    - n = page.title
+  meta(property="og:title",content=n)
+  meta(name="twitter:title",content=n)
+  meta(name="name",content=n)
+  

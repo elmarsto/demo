@@ -1,0 +1,21 @@
+doctype html
+html(lang=locals.language.code,itemscope,itemtype="http://schema.org/Article")
+  head
+    include logic
+    include meta
+    include link
+    include icon
+    include style
+    block head
+    title
+      - var t = (page) ? page.title + ' - ' + locals.name : locals.name;
+      | !{t}
+  - var bodyClass = (page && 'class' in page.metadata) ? page.metadata.class : 'body';
+  body.ink-grid#body(class=bodyClass ng-controller="Site")
+    div#page
+      header.area.header(role='heading')
+        block header
+      main.area.main(role='main')
+        block content
+      footer.area.footer(role='complementary')
+        block footer

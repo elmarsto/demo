@@ -1,0 +1,91 @@
+
+
+- function cdn(f) {
+-   var cdnr = ('cdn' in locals && !!locals.cdn) ?  locals.cdn : locals.base;
+-   return cdnr + f;
+- }
+
+
+- function viewport(a) {
+- return  ' initial-scale=' + a.initial + ',maximum-scale=' + a.max +  ',user-scalable=' + a.user;
+- }
+
+
+- function js(fr) {
+-  return typath(fr,'js',!!locals.cdn);
+- }
+
+- function requirejs(fr) {
+-  return locals.loader.src + '.js';
+- }
+
+
+mixin js(fr)
+  if (fr && fr != 'undefined.js')
+    script(src=js(fr),type="text/javascript",charset="utf-8")
+
+mixin requirejs()
+  script(src=requirejs(),type="text/javascript",charset="utf-8")
+
+
+- function css(fr) {
+-  return typath(fr,'css',!!locals.cdn);
+- }
+
+mixin css(fr)
+  if (fr && fr != '.css')
+    link(href=css(fr),rel='stylesheet',type='text/css',charset="utf-8")
+
+
+
+-function typath(x,typ,use_cdn) {
+-var dotary = x.split('.');
+-var has_extension = (dotary.pop() == typ);
+-var is_absolute = /^(http(s?):\/)\/(.*)$/.test(x);
+-var p = ((is_absolute) ? '' : ('/' + locals.path[typ] + '/' )) + x + ((has_extension) ? ''  : '.' + typ);
+-return (use_cdn && !is_absolute) ? cdn(p) : p ;
+-}
+
+-function guesspath(x,use_cdn) { 
+-var dotary = x.split('.');
+-var typ = dotary.pop();
+-return typath(x,typ,use_cdn);
+-}
+
+
+-function png(x) {
+-return typath(x,'png',!!locals.cdn);
+-}
+
+-function jpg(x) {
+-return typath(x,'jpg',!!locals.cdn);
+-}
+
+-function svg(x) {
+-return typath(x,'svg',!!locals.cdn);
+-}
+
+-function woff(x) {
+-return typath(x,'woff',!!locals.cdn);
+-}
+
+-function ttf(x) {
+-return typath(x,'ttf',!!locals.cdn);
+-}
+
+-function eot(x) {
+-return typath(x,'eot',!!locals.cdn);
+-}
+
+-function mp3(x) {
+-return typath(x,'mp3',!!locals.cdn);
+-}
+-function ogg(x) {
+-return typath(x,'ogg',!!locals.cdn);
+-}
+-function mp4(x) {
+-return typath(x,'mp4',!!locals.cdn);
+-}
+-function youtube(x) {
+-throw "Not yet implemented."
+-}

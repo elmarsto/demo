@@ -53,8 +53,9 @@
           "paths"  : { "ng":        "https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min",
                        "ng-touch":  "https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular-touch",
                        "site":  "https://undoware-cdn.appspot.com/logic/site",
+                       "logo":  "https://undoware-cdn.appspot.com/logic/logo"
           },
-          "deps"   : [ "ng", "site"  ]
+          "deps"   : [ "ng", "site", "logo"  ]
         }
     },
     "scale": {

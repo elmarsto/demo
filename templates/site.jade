@@ -1,0 +1,29 @@
+// /* MIT License, (c) 2013  Elizabeth Marston */
+
+
+block append header
+  include ie.html
+  //command zee-bra, get it? Just some decoration
+  div#zebra
+  div.column-group
+    div.logo-block.push-left.large-25.small-25
+      div.chop
+        //todo figure out why angular logo module falls down here
+        a(href='/')
+          img(src=svg('logo'),alt="logo")
+      div.logotype
+        h1
+          span.logo#logo UND↺WARE
+        em.slogan
+          a(href='/what/')=locals.description
+
+    nav
+      ul
+        each location in locals.sitemap
+          li
+            a(href=location.href)= location.menu.name
+
+extends stock
+
+
+
