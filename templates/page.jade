@@ -1,12 +1,12 @@
 
 
 block append content
-  div.all-25
+  div#sidebar.all-25.small-100
     div.hotlinks
       include sidebar-hotlinks
     div.signup
        include sidebar-signup
-  div.all-75
+  div#content.all-75.small-100
     | !{page.html}
 
 extends site

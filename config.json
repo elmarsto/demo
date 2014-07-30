@@ -3,12 +3,12 @@
   "locals": {
     "tweets": [ { 
        "name": "Company",
-       "at": "@Company,",
+       "at": "@Company",
        "content": "Lorem Ipsum dolor...",
        "date": "20 Dec"
       },{ 
        "name": "Company",
-       "at": "@Company,",
+       "at": "@Company",
        "content": "http://somelink.com/",
        "date": "20 Dec"
       }

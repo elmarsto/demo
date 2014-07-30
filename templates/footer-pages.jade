@@ -1,12 +1,12 @@
 
 h3 Pages
 div.column-group
-ul.all-90
+ul.all-80
   each location in locals.sitemap
     li
       a(href=location.href)= location.menu.name
-ul.all-10
+ul.all-20
   each location in locals.extmap
-    li.button
+    li.menubutton
       a(href=location.href)
-        i.fa(class=location.menu.icon)
+        i.fa.fa-lg(class=location.menu.icon)

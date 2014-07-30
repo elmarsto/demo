@@ -10,7 +10,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sit amet tempus i
 
 <div class="column-group">
 
-<ul class="all-50">
+<ul class="all-50 small-100">
 <li>Lorem ipsum dolor sit
 <li>Lorem ipsum dolor sit
 <li>Lorem ipsum dolor sit
@@ -21,7 +21,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sit amet tempus i
 <li>Lorem ipsum dolor sit
 </ul>
 
-<ul class="all-50">
+<ul class="all-50 small-100">
 <li>Lorem ipsum dolor sit
 <li>Lorem ipsum dolor sit
 <li>Lorem ipsum dolor sit
@@ -31,5 +31,5 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sit amet tempus i
 <li>Lorem ipsum dolor sit
 <li>Lorem ipsum dolor sit
 </ul>
-
 </div>
+

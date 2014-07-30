@@ -13,15 +13,16 @@ block append header
   img.all-100(src='/raster/dummy.png',alt='spinner')
 
 block append footer
-  div.all-33
+  div#pages.all-25.small-100
     include footer-pages
-  div.all-33
+  div#twitter.all-50.small-100
     include footer-twitter
-  div.all-33
+  div#newsletter.all-25.small-100
     include footer-newsletter
 
 block append page
-  include copyright
+  div#copyright
+    include copyright
 
 extends stock
 

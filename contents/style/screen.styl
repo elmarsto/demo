@@ -7,9 +7,24 @@ body
   local-font()
   h1, h2, h3, h4
     local-headline-font()
+  h3, h4
+    font-family: 'Eurostile'
+    font-size: 14pt
 nav
-  box-shadow 2px 2px 2px #101010
-  background-color local-highlight-color
+  ul
+   margin: 0
+   padding: 0
+   li
+     margin-top: 5px 
+     padding-top: 0
+     padding-bottom: 0
+     min-height 24px
+     border-right: solid #FFF 1pt
+  local-headline-font()
+  font-family: 'Eurostile-bold'
+  font-size: 10pt
+  box-shadow 1px 1px 5px #101010
+  background-color local-action-color
   color white
   a
     color: white
@@ -17,6 +32,7 @@ nav
     &:active
     &:focus
       text-decoration: underline
+      color: white
   li
     padding: 1em;
     display: inline-block
@@ -38,3 +54,189 @@ footer.main
   color: local-action-color
   background-color: local-background-color
 
+#sidebar
+  h3
+    border-bottom: solid local-background-color 1pt
+  > div
+    background-color: white
+    padding: 3px 3px
+    > h3
+      padding: 4px
+
+.signup
+  margin-top: 24px
+  .control-group
+    margin-bottom: 0
+    div:first-child
+      padding-right: 3px
+
+.hotlinks
+  font-family: 'Eurostile'
+  font-size: 14pt
+  color: #AAA
+  ul
+    list-style none
+    padding: none
+  li:before
+    
+    content: '>'
+    color: local-action-color
+    padding-right: 0.7em
+
+main
+  padding: 24px
+#sidebar
+  padding-right: 25px 
+
+#copyright
+#content
+  background-color: #f0eeef
+  color: black
+#copyright
+  padding: 4px 32px
+  font-family: 'Eurostile-bold' 
+  font-size: 08pt
+  text-transform: uppercase
+  ul
+    list-style: none
+    display inline
+    li
+      display inline-block
+      &:first-child
+        border-right: solid black 1px
+        padding-right: 0.3em
+
+#content
+  padding: 24px
+  font-size: 11pt
+  ul
+    list-style: none
+  li:before
+    display: inline-block;
+    margin-right: 0.1em;
+    min-width: 2em;
+    min-height: 2em;
+    vertical-align middle
+    margin-right 0.3em
+    color: white
+    content: ' '
+    background-image: url('/raster/down.png')
+    background-repeat: no-repeat
+    background-position: center center
+
+
+footer.main
+  > div
+    padding: 0 12px
+  h3
+   margin: 12px
+   font-size: 18pt
+   font-family: 'Eurostile-bold'
+   color: local-highlight-color
+   text-align: center
+  label
+    font-size: 9pt
+input[type='text']
+input[type='email']
+  font-size: 10pt
+
+input[type='submit']
+#sidebar input
+  border-radius: 3px 
+  margin: 2px 0px
+
+input[type='submit']
+  text-transform: uppercase
+  font-family: Eurostile
+  color: white
+  background-color: local-action-color
+  border: none
+  text-align: right
+  padding: 0.2em 0.5em
+  font-size: 13pt
+    
+
+#pages ul  
+  line-height: 1
+  font-size: 11pt
+  font-weight: 700
+  text-transform: uppercase
+  list-style: none
+  .menubutton
+    display: inline-block
+    vertical-align: middle
+    text-align: center
+    border-radius: 3px
+    min-width: w=32px
+    min-height: w
+    padding: 6px
+    color: black
+    background-color: local-highlight-color
+
+#newsletter
+  input[type='checkbox']
+    margin: 0
+  input[type='checkbox']
+  input[type='text']
+  input[type='email']
+    background-color: #a19d9e
+    color: black
+    line-height: 1
+  a
+    color: #ffB44d
+    font-weight: 700
+    text-decoration: underline
+
+::-webkit-input-placeholder
+:-moz-placeholder
+::-moz-placeholder
+:-ms-input-placeholder
+  color: #4d4d4f
+
+.tweet
+  color: white
+  font-size: 8pt
+.tweet-name
+  color: white
+  font-family: 'Eurostile-bold'
+.tweet-at
+.tweet-date
+  color: white
+  font-family: 'Eurostile'
+.tweet-date
+  font-size: 8pt
+.tweet-content
+  color: #e3e3e3
+
+
+#pall
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  z-index: 1
+  background-color: rgba(50,50,50,0.5)
+  content: ' '
+  .alert
+    box-shadow 1px 1px 5px #101010
+    background-color: white
+    width: w=256px
+    min-width: w
+    max-width: w
+    height: h=192px
+    min-height: h
+    margin: 30vh auto 0 auto
+    .alert-title
+      color: white
+      background-color: local-action-color
+      font-family: Eurostile-bold
+      &:before
+        font-weight: 900
+        font-size: 1.3em
+        content: '\00D7'
+        padding: 0.3em
+    p
+      padding 0.3em
+     
+   

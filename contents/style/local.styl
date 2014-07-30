@@ -2,22 +2,30 @@
 
 
 local-accent-color =  #066b4d
-local-highlight-color = #06a978
+local-highlight-color = #aeffe7
 local-gutter-color = #706e6f
 local-background-color = #d7d7d7
 local-action-color = #06a978
-local-corner-radius = 0px
 
 local-headline-font()
-  font-family: 'Source Sans Pro', 'Open Sans', Helvetica, serif;
-  font-size: 36pt;
-  font-weight: 400;
-  color: local-action-color
+  font-family: 'Eurostile', Helvetica, serif;
+  font-size: 24pt;
+  text-transform: uppercase
+
 
 local-font()
   font-family: 'Source Sans Pro', 'Open Sans', Helvetica, serif;
   color: local-accent-color
   font-size: 16pt
   font-weight: 300
+
+
+@font-face 
+  font-family: 'Eurostile';
+  src: url('/fonts/eurostile-webfont.eot?') format('eot'), url('/fonts/eurostile-webfont.woff') format('woff'), url('/fonts/eurostile-webfont.ttf') format('truetype');
+
+@font-face 
+  font-family: 'Eurostile-bold';
+  src: url('/fonts/eurostile-bold-webfont.eot?') format('eot'), url('/fonts/eurostile-bold-webfont.woff') format('woff'), url('/fonts/eurostile-bold-webfont.ttf') format('truetype');
 
 // vim: expandtab :
